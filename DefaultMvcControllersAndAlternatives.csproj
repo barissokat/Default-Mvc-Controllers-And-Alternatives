@@ -156,6 +156,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultBooksController.cs" />
+    <Compile Include="Controllers\DefaultCategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\BookContext.cs" />
     <Compile Include="DAL\BookInitializer.cs" />
@@ -204,6 +206,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\DefaultCategories\Create.cshtml" />
+    <Content Include="Views\DefaultCategories\Delete.cshtml" />
+    <Content Include="Views\DefaultCategories\Details.cshtml" />
+    <Content Include="Views\DefaultCategories\Edit.cshtml" />
+    <Content Include="Views\DefaultCategories\Index.cshtml" />
+    <Content Include="Views\DefaultBooks\Create.cshtml" />
+    <Content Include="Views\DefaultBooks\Delete.cshtml" />
+    <Content Include="Views\DefaultBooks\Details.cshtml" />
+    <Content Include="Views\DefaultBooks\Edit.cshtml" />
+    <Content Include="Views\DefaultBooks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
