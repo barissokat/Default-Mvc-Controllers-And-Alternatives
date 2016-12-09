@@ -156,10 +156,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BookController.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\DefaultBooksController.cs" />
-    <Compile Include="Controllers\DefaultCategoriesController.cs" />
+    <Compile Include="Controllers\AlternativeBookController.cs" />
+    <Compile Include="Controllers\AlternativeCategoryController.cs" />
+    <Compile Include="Controllers\DefaultBookController.cs" />
+    <Compile Include="Controllers\DefaultCategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\BookContext.cs" />
     <Compile Include="DAL\BookInitializer.cs" />
@@ -208,19 +208,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\DefaultCategories\Create.cshtml" />
-    <Content Include="Views\DefaultCategories\Delete.cshtml" />
-    <Content Include="Views\DefaultCategories\Details.cshtml" />
-    <Content Include="Views\DefaultCategories\Edit.cshtml" />
-    <Content Include="Views\DefaultCategories\Index.cshtml" />
-    <Content Include="Views\DefaultBooks\Create.cshtml" />
-    <Content Include="Views\DefaultBooks\Delete.cshtml" />
-    <Content Include="Views\DefaultBooks\Details.cshtml" />
-    <Content Include="Views\DefaultBooks\Edit.cshtml" />
-    <Content Include="Views\DefaultBooks\Index.cshtml" />
+    <Content Include="Views\DefaultCategory\Create.cshtml" />
+    <Content Include="Views\DefaultCategory\Delete.cshtml" />
+    <Content Include="Views\DefaultCategory\Details.cshtml" />
+    <Content Include="Views\DefaultCategory\Edit.cshtml" />
+    <Content Include="Views\DefaultCategory\Index.cshtml" />
+    <Content Include="Views\DefaultBook\Create.cshtml" />
+    <Content Include="Views\DefaultBook\Delete.cshtml" />
+    <Content Include="Views\DefaultBook\Details.cshtml" />
+    <Content Include="Views\DefaultBook\Edit.cshtml" />
+    <Content Include="Views\DefaultBook\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AlternativeBook\" />
+    <Folder Include="Views\AlternativeCategory\" />
     <Folder Include="Views\Book\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>

@@ -11,7 +11,7 @@ using DefaultMvcControllersAndAlternatives.Models;
 
 namespace DefaultMvcControllersAndAlternatives.Controllers
 {
-    public class DefaultBooksController : Controller
+    public class DefaultBookController : Controller
     {
         private BookContext db = new BookContext();
 
