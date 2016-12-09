@@ -223,10 +223,14 @@
     <Content Include="Views\AlternativeCategory\Edit.cshtml" />
     <Content Include="Views\AlternativeCategory\Delete.cshtml" />
     <Content Include="Views\AlternativeCategory\Details.cshtml" />
+    <Content Include="Views\AlternativeBook\Index.cshtml" />
+    <Content Include="Views\AlternativeBook\Create.cshtml" />
+    <Content Include="Views\AlternativeBook\Edit.cshtml" />
+    <Content Include="Views\AlternativeBook\Delete.cshtml" />
+    <Content Include="Views\AlternativeBook\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AlternativeBook\" />
     <Folder Include="Views\Book\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
