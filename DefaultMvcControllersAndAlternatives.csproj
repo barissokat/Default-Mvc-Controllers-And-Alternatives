@@ -218,11 +218,15 @@
     <Content Include="Views\DefaultBook\Details.cshtml" />
     <Content Include="Views\DefaultBook\Edit.cshtml" />
     <Content Include="Views\DefaultBook\Index.cshtml" />
+    <Content Include="Views\AlternativeCategory\Index.cshtml" />
+    <Content Include="Views\AlternativeCategory\Create.cshtml" />
+    <Content Include="Views\AlternativeCategory\Edit.cshtml" />
+    <Content Include="Views\AlternativeCategory\Delete.cshtml" />
+    <Content Include="Views\AlternativeCategory\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\AlternativeBook\" />
-    <Folder Include="Views\AlternativeCategory\" />
     <Folder Include="Views\Book\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
