@@ -16,6 +16,14 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
         {
             return View(db.Categories);
         }
+        public ActionResult Show(int id)
+        {
+            string categoryName = (from c in db.Categories where c.Id == id select c.Name).FirstOrDefault();
+            ViewBag.Title = categoryName + " Books";
+            ViewBag.Id = id;
+            var books = (from b in db.Books where b.CategoryId == id select b).ToList();
+            return View(books.OrderBy(x => x.Name).ToList());
+        }
         public ActionResult Create()
         {
             return View();
@@ -26,6 +34,21 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
             db.Categories.Add(category);
             db.SaveChanges();
             return Redirect("Index");
+        }
+        public ActionResult CreateBook(int id)
+        {
+            string categoryName = (from c in db.Categories where c.Id == id select c.Name).FirstOrDefault();
+            ViewBag.CategoryName = categoryName;
+            ViewBag.Id = id;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateBook(Book book, int id)
+        {
+            book.CategoryId = id;
+            db.Books.Add(book);
+            db.SaveChanges();
+            return RedirectToAction("Show", new { id = book.CategoryId });
         }
         public ActionResult Edit(int id)
         {

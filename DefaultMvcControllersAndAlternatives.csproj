@@ -226,6 +226,8 @@
     <Content Include="Views\AlternativeBook\Edit.cshtml" />
     <Content Include="Views\AlternativeBook\Delete.cshtml" />
     <Content Include="Views\AlternativeBook\Details.cshtml" />
+    <Content Include="Views\AlternativeCategory\Show.cshtml" />
+    <Content Include="Views\AlternativeCategory\CreateBook.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
