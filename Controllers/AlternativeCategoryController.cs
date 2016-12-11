@@ -97,6 +97,18 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
             db.SaveChanges();
             return RedirectToAction("Show", new { id = deletedBook.CategoryId });
         }
+        public ActionResult DetailsBook(int id)
+        {
+            var categories = db.Categories.OrderBy(c => c.Name).ToList().Select(c => new SelectListItem
+            {
+                Selected = false,
+                Text = c.Name,
+                Value = c.Id.ToString()
+            }).ToList();
+            ViewBag.Categories = categories;
+            Book book = db.Books.Where(b => b.Id == id).FirstOrDefault();
+            return View(book);
+        }
         public ActionResult Edit(int id)
         {
             var category = db.Categories.Where(c => c.Id == id).FirstOrDefault();
