@@ -83,9 +83,9 @@
             </div>
         </div>
     </div>
+    <div>
+        @Html.ActionLink("Back to Book List", "Show", new { id = ViewBag.Id }) |
+        @Html.ActionLink("Back to Category List", "Index")
+    </div>
 }
 
-<div>
-    @* @Html.ActionLink("Back to Book List", "Show", new { id = ViewBag.KategoriId }) | *@
-    @Html.ActionLink("Back to Category List", "Index")
-</div>

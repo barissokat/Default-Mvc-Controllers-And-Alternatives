@@ -59,6 +59,7 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
                 Value = c.Id.ToString()
             }).ToList();
             ViewBag.Categories = categories;
+            ViewBag.Id = categories.First().Value;
             Book book = db.Books.Where(b => b.Id == id).FirstOrDefault();
             return View(book);
         }
@@ -86,6 +87,7 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
                 Value = c.Id.ToString()
             }).ToList();
             ViewBag.Categories = categories;
+            ViewBag.Id = categories.First().Value;
             Book book = db.Books.Where(b => b.Id == id).FirstOrDefault();
             return View(book);
         }
@@ -106,6 +108,7 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
                 Value = c.Id.ToString()
             }).ToList();
             ViewBag.Categories = categories;
+            ViewBag.Id = categories.First().Value;
             Book book = db.Books.Where(b => b.Id == id).FirstOrDefault();
             return View(book);
         }

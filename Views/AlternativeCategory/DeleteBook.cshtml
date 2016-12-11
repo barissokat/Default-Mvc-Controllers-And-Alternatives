@@ -82,6 +82,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to Book List", "Show", new { id = ViewBag.Id }) |
             @Html.ActionLink("Back to Category List", "Index")
         </div>
     }
