@@ -50,6 +50,33 @@ namespace DefaultMvcControllersAndAlternatives.Controllers
             db.SaveChanges();
             return RedirectToAction("Show", new { id = book.CategoryId });
         }
+        public ActionResult EditBook(int id)
+        {
+            var categories = db.Categories.OrderBy(c => c.Name).ToList().Select(c => new SelectListItem
+            {
+                Selected = false,
+                Text = c.Name,
+                Value = c.Id.ToString()
+            }).ToList();
+            ViewBag.Categories = categories;
+            Book book = db.Books.Where(b => b.Id == id).FirstOrDefault();
+            return View(book);
+        }
+        [HttpPost]
+        public ActionResult EditBook(Book book)
+        {
+            Book editedBook = db.Books.Where(b => b.Id == book.Id).FirstOrDefault();
+            editedBook.CategoryId = book.CategoryId;
+            editedBook.Name = book.Name;
+            editedBook.ISBN = book.ISBN;
+            editedBook.Author = book.Author;
+            editedBook.Publisher = book.Publisher;
+            editedBook.PublicationDate = book.PublicationDate;
+            editedBook.Price = book.Price;
+            editedBook.ReducedPrice = book.ReducedPrice;
+            db.SaveChanges();
+            return RedirectToAction("Show", new { id = book.CategoryId });
+        }
         public ActionResult Edit(int id)
         {
             var category = db.Categories.Where(c => c.Id == id).FirstOrDefault();
