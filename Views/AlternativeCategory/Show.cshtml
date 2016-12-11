@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<DefaultMvcControllersAndAlternatives.Models.Book>
 
 @{
-    ViewBag.Title = "Show";
+    ViewBag.Title = "Book List";
 }
 
-<h2>Show</h2>
+<h2>Book List</h2>
 
 <p>
-    @Html.ActionLink("Create New Book", "CreateBook", new { Id = ViewBag.Id })
+    @Html.ActionLink("Add New Book", "CreateBook", new { Id = ViewBag.Id })
 </p>
 <table class="table">
     <tr>
