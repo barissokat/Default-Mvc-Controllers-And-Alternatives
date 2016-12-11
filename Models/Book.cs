@@ -9,6 +9,7 @@ namespace DefaultMvcControllersAndAlternatives.Models
     public class Book
     {
         public int Id { get; set; }
+        [DisplayName("Category Id")]
         public int CategoryId { get; set; }
         [DisplayName("Book Name")]
         public string Name { get; set; }
